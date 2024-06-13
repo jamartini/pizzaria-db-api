@@ -7,7 +7,7 @@ class CardapioRepositorio {
 
     salvarCardapio(dados) {
         return this.prisma.cardapio.create({
-            dados
+            data:dados
         });
     }
 

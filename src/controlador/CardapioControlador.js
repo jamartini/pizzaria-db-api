@@ -11,7 +11,7 @@ class CardapioControlador {P
             const pizza = await this.cardapioServico.salvarCardapio(dados)
             resposta.status(201).json(pizza)
         } catch (erro){
-            resposta.status(400).json({erro:erro.message()})
+            resposta.status(400).json('erro')
         }
     }
 }
