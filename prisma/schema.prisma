@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Cardapio {
+  id Int @id @default(autoincrement())
+  nome String @db.VarChar(20)
+  preco Float
+  descricao String @db.VarChar(400)
+  ingredientes String @db.VarChar(400)
+}
