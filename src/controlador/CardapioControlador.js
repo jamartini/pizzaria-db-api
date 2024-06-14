@@ -14,6 +14,16 @@ class CardapioControlador {P
             resposta.status(400).json('erro')
         }
     }
+
+    async listarTodos(requisicao, resposta) {
+        try {
+            const cardapio = await this.cardapioServico.listarTodos()
+            resposta.status(200).json(cardapio)
+        } catch (erro){
+            
+            resposta.status(400).json('erro')
+        }
+    }
 }
 
 module.exports = CardapioControlador

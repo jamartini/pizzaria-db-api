@@ -5,4 +5,14 @@ const rota = express.Router()
 const cardapio = new CardapioControlador()
 
 rota.post("/pizza",(requisicao, resposta) => cardapio.salvarCardapio(requisicao, resposta))
+rota.get("/listar-todos",(requisicao, resposta) => cardapio.listarTodos(requisicao, resposta))
+
+
+
+
+
+
+
+
+
 module.exports = rota

@@ -11,14 +11,18 @@ class CardapioRepositorio {
         });
     }
 
-    listarCardapio() {
+    listarTodos() {
         return this.prisma.cardapio.findMany()
     }
 
-    atualizarItem(id, dados) {
+    atualizarItens(dados, id) {
         return this.prisma.cardapio.update({
-            where: {id},
-            data: {dados}
+            where: {
+                id: id,
+              },
+              data: {
+                dados,
+              },
         })
     }
 }

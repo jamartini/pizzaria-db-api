@@ -14,6 +14,10 @@ class CardapioServico {
         }
         return await this.cardapioRepositorio.salvarCardapio(dados)
         }
+
+    async listarTodos() {
+        return await this.cardapioRepositorio.listarTodos()
+    } 
 }
 
 module.exports = CardapioServico
